@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-divice-width, initial-scale=1.0">
+    <title>CSS Advance</title>
+    <style>
+        body{
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        :root{
+            --box:2px solid black;
+            --theme-color:pink;
+            --shadow: 10px 10px var(--theme-color);
+            --spacing:20px;
+            --font:40px;
+        }
+        .box-1{
+            border:var(--box);
+            box-shadow: var(--shadow);
+            margin: var(--spacing);
+        }
+        .box-2{
+            border:2px solid black;
+        }
+        .box-3{
+            border:2px solid black;
+            background-color: var(--theme-color);
+        }
+        h3{
+            font-size: var(--font);
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            border: 2px solid black;
+            margin:100px;
+            /* ย้ายตำแหน่งobject transform: translate(x,y) 
+            หมุนobject rotate(Ndeg) 
+            บีบขนาดobject rotateX(Ndeg), rotateY(Ndeg), rotateZ(Ndeg)
+            ทำscaleของobject scale(x,y) 
+            ทำการบิดobject skewX(Ndeg), skewY(Ndeg) หรือ shorthand skew(X,Y)*/
+
+            /* transform: translate(80px,80px) rotate(30deg) rotateY(30deg) ; */
+            transform: scale(1.5,2.5) skewX(20deg) skewY(20deg) ;
+            /* transform: scale(1.5,2.5) skew(20deg,20deg); */
+        }
+        .orange{
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+            /* transition ทำให้เปลี่ยนค่า property จากอีกค่านึงไปอีกค่า */
+            /* transition-property: background-color, border-radius;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s; */
+            /* shorthand: property duration timing-function delay
+            ข้อควรระวัง ต้องระบุ fade-in duration ของทุกๆ property / หรือจะใช้ all แล้วระบุ duration ได้เลย */
+            /* transition: background-color 3s, border-radius 3s, width 3s, height 3s ease-in-out 0.5s; */
+            transition: all 3s ease-in-out 2s;
+        }
+        .orange:hover{
+            background-color: brown;
+            border-radius: 20px;
+            width:300px;
+            height:300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1">
+        <h3>Heading 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, vel!</p>
+    </div>
+    <div class="box-2">
+        <h3>Heading 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, vel!</p>
+    </div>
+    <div class="box-3">
+        <h3>Heading 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, vel!</p>
+    </div>
+    <hr>
+    <div class="box"></div>
+    <hr>
+    <div class="orange"></div>
+</body>
+</html>

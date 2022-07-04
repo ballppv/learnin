@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnBook P.3</title>
+    <style>
+        span{
+            border:1px solid red;
+        }
+        div{
+            border:1px solid greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Page 3</h1>
+    <hr>
+    <!-- borde ทำกรอบตาราง / padding ขนาดของช่องข้อมูล / spacing ขนาดกรอบระหว่างข้อมูล -->
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead bgcolor="pink">
+            <th>MovieName</th>
+            <th>Duration</th>
+            <th>Release</th>
+            <th>EpisodeLeft</th>
+            <th>Link</th>
+        </thead>
+        <caption>This table is just for testing</caption>
+        <tbody>
+            <tr>
+                <td>BreakingBad</td>
+                <td>45min</td>
+                <!-- align คือการจัดตำแหน่งของข้อมูลให้อยู่ส่วนไหนภายในcolumn ถ้าอยากให้ปรับช่องทั้งหมดนำไปใส่ใน tbody -->
+                <td align="center">2013</td>
+                <td align="center">22</td>
+                <td align="center">
+                    <a href="https://www.netflix.com/browse?jbv=70143836" target="_blank">Here</a>
+                </td>
+            </tr>
+            <tr>
+                <td>BusinessProposal</td>
+                <td>60min</td>
+                <td align="center">2022</td>
+                <td align="center">10</td>
+                <td align="center">
+                    <a href="https://www.netflix.com/browse?jbv=81509440" target="_blank">Here</a>
+                </td>
+            </tr>
+            <tr>
+                <td>TheFinalTable</td>
+                <td>53min</td>
+                <td align="center">2018</td>
+                <td align="center">10</td>
+                <td align="center">
+                    <a href="https://www.netflix.com/browse?jbv=80201866" target="_blank">Here</a>
+                    <!-- ถ้าใส่ # ไว้แสดงว่ายังไม่มีลิ้งค์ -->
+                    <a href="#" target="_blank">Test</a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <!-- colspan="n" Extend Span Cell / มีคำสั่งrowspanใช้แบบเดียวกัน -->
+                <td colspan="3" bgcolor="lightgreen">Test Span</td>
+                <td>Test</td>
+                <td>Test</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- How to use span / span = inline -->
+    <span style="color:rgb(117, 202, 152)">
+        <h2>HTML5</h2>
+        <p>SOMETHING</p>
+    </span>
+    <span style="color:rgb(98, 75, 226)">
+        <h2>CSS</h2>
+        <p>SOMETHING</p>
+    </span>
+    <!-- EX.span -->
+    <span> XXX </span>
+    <span> xxx </span>
+    <span> XXX </span>
+    <!-- How to use div / divจะขึ้นบรรทัดใหม่ให้ในแต่ละช่องข้อมูล / div = block -->
+    <div style="color:rgb(83, 187, 152)">
+        <h2>HTML5</h2>
+        <p>SOMETHING</p>
+    </div>
+    <div style="color:rgb(62, 171, 214)">
+        <h2>CSS</h2>
+        <p>SOMETHING</p>
+    </div>
+    <!-- EX.div -->
+    <div> XXX </div>
+    <div> xxx </div>
+    <div> XXX </div>
+    <hr>
+    <a href="HTML.html">Home</a>
+</body>
+</html>

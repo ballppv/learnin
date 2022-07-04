@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <!-- หลักๆของ box model จะมี 3 ส่วน
+    Margin ขอบนอก / Padding ขอบใน / Content เนื้อหาภายในสุด -->
+    <style>
+        /* การกำหนดmargin/paddingในรูปแบบshorthand
+        กรณี4รูปแบบ margin/padding: x x x x คือ top, right, bottom, left
+        กรณี3รูปแบบ margin/padding: x x x คือ top, right + left, bottom
+        กรณี2รูปแบบ margin/padding: x x คือ top + bottom, right + left */
+        body{
+            /* ภาพที่นำมาใช้เล็กเกินไป มันจะทำซ้ำจนภาพเต็มbackground / 
+            เราสามารถกำหนดการทำซ้ำได้ โดยbackground-repeat*/
+            /* background-image: url('https://media.istockphoto.com/photos/happy-kitten-likes-being-stroked-by-womans-hand-picture-id909106260'); */
+            /* background-repeat: no-repeat; */
+            /* attachment fixed ทำให้ขณะเราเลื่อน scroll คือ background ก็จะยังอยู่นิ่งที่เดิมในหน้า browser */
+            /* background-attachment: fixed; */
+            /* สามารถกำหนด position ของ background ได้ */
+            /* background-position: center; */
+            /* สามารถเขียนทุกคำสั่งในบรรทัดเดียวได้ */
+            background: url('https://media.istockphoto.com/photos/happy-kitten-likes-being-stroked-by-womans-hand-picture-id909106260') no-repeat fixed center;
+            /* สามารถกำหนด size ของ background ได้
+            Ex. contain cover 100% 50% auto หรือกำหนด px */
+            background-size: cover;
+            line-height: 1.4em;
+        }
+        div.box1,div.box2,div.box3{
+            border:2px dashed orange;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .box1{
+            margin-left: 50px;
+            padding-top: 20px;
+        }
+        .box2{
+            margin: 20px 15px 40px 10px;
+            padding: 20px 15px 10px 10px;
+            background-image: url('image/Doe.jpg');
+            /* สมมติคำสั่งให้แค่ repeat y (แนวตั้ง)โดยเฉพาะ / แนวแกน x ก็เลยไม่ทำซ้ำแล้ว */
+            background-repeat: repeat-y;
+        }
+        .box3{
+            margin: 70px 40px 60px;
+            padding: 20px 10px 32px;
+            background-color: pink
+        }
+        img{
+            border-style: solid;
+            border-color: pink;
+            width: 100px;
+            margin: 10px;
+            padding: 12px;
+        }
+        div.cat1 img{
+            float: left;
+            opacity: 0.5;
+        }
+        div.cat2 img{
+            float: right;
+        }
+        div.cat3 img{
+            float: none;
+            /* ซ่อนobject */
+            visibility: hidden;
+        }
+        .container{
+            width: 960px;
+            margin:30px auto;
+        }
+        .box{
+            background:white;
+            border:1px solid black;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        #box-2{
+            float: left;
+            width: 50%;
+        }
+        #box-3{
+            float: right;
+            width: 40%;
+        }
+        .clear{
+            /* clear ทำให้ไม่ float */
+            clear:both ;
+        }
+        /* สามารถใช้ box-sizing: border-box; และ display: inline/block/inline-block เพื่อจัดรูปแบบได้ */
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p>Test Box1</p>
+    </div>
+    <div class="box2">
+        <p>Test Box2</p>
+    </div>
+    <div class="box3">
+        <p>Test Box3</p>
+    </div>
+    <div class="box4">
+        <p>Test Box4</p>
+    </div>
+    <div class="cat1">
+        <p>
+            <img src="https://cdn.pixabay.com/photo/2022/02/24/15/17/cat-7032641_960_720.jpg" alt="">
+            รูปเจ้าแมวตัวน้อยๆ ที่แสนน่ารัก xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </p>
+    </div>
+    <div class="cat2">
+        <p>
+            <img src="https://cdn.pixabay.com/photo/2022/02/24/15/17/cat-7032641_960_720.jpg" alt="">
+            รูปเจ้าแมวตัวน้อยๆ ที่แสนน่ารัก xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </p>
+    </div>
+    <div class="cat3">
+        <p>
+            <img src="https://cdn.pixabay.com/photo/2022/02/24/15/17/cat-7032641_960_720.jpg" alt="">
+            รูปเจ้าแมวตัวน้อยๆ ที่แสนน่ารัก xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </p>
+    </div>
+    <hr>
+    <div class="container">
+        <div id="box-1" class="box">
+            <h1>LocalB</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, itaque, quia dolorum nulla commodi maxime ad autem aut expedita est delectus necessitatibus fugit enim alias vel, labore magnam aspernatur. Cupiditate.</p>
+        </div>
+        <div id="box-2" class="box">
+            <h1>LocalB</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit praesentium eius voluptatum repudiandae eveniet illum, corrupti sed quis, sint exercitationem earum dignissimos! Dolore ex, repudiandae eaque dolorum voluptate non blanditiis!</p>
+        </div>
+        <div id="box-3" class="box">
+            <h1>LocalB</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus laborum nam nisi suscipit soluta assumenda velit exercitationem aliquid distinctio culpa neque ipsam inventore similique cumque non libero, voluptatibus aut quia?</p>
+        </div>
+        <div class="clear"></div>
+        <div id="box-4" class="box">
+            <h1>LocalB</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus laborum nam nisi suscipit soluta assumenda velit exercitationem aliquid distinctio culpa neque ipsam inventore similique cumque non libero, voluptatibus aut quia?</p>
+        </div>
+    </div>
+</body>

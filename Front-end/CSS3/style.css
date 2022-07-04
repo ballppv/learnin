@@ -1,0 +1,68 @@
+p#message{
+    color:yellowgreen;
+}
+body{
+    font-size: 12px;
+}
+div{
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: bolder;
+    color:rgb(61, 184, 184);
+    width: 100px;
+    height: 100px;
+}
+.button{
+    background-color: rgba(248, 209, 141, 0.5);
+}
+a{
+    color: hotpink;
+    text-decoration: none;
+}
+/* ถ้าต้องการให้ทุกส่วนใช้ style เดียวกัน ใช้*(star) คือUniveralSelector */
+/* การระบุสี ระบุชื่อสีไปเลย, rgb, hsl และ hexadecimal */
+/* นอกจาก rbg แล้วยังมี rgba(red,green,blue,alpha) alpha คือค่าความโปร่งแสง มีค่า 0-1 (1 คือ 100%) */
+*{
+    color: rgb(14, 94, 119);
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+}
+/* ส่วนของพวกกล่อง 4 สี */
+/* border-ทิศทาง-width กำหนดขนาดของขอบ */
+/* border-ทิศทาง-color กำหนดสีของขอบ */
+/* border-ทิศทาง-style กำหนดรูปแบบของขอบ */
+/* border-ทิศทาง-radius กำหนดความโค้งเส้นของ / มีรูปแบบshorthand 
+กรณี4รูปแบบ border-radius: 10px 4px 6px 15px คือ top-left, top-right, bottom-right, bottom-left / 
+กรณี3รูปแบบ border-radius: 10px 5px 15px คือ top-left, top-right + bottom-left, bottom-right /
+กรณี2รูปแบบ border-radius: 10px 5px คือ top-left + bottom-right, top-right + bottom-left /
+ */
+.box1{
+    background-color: aquamarine;
+    border-color: hotpink;
+    border-width: 10px;
+    border-top-style: dotted;
+    border-left-style: dashed;
+    border-right-style: solid;
+    border-bottom-style: double;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+}
+.box2{
+    background-color: hotpink;
+    border: dotted 5px honeydew;
+    border-radius: 20px 40px;
+}
+.box3{
+    background-color: blueviolet;
+    border: dashed 5px goldenrod;
+    border-radius: 10px 20px 30px;
+}
+.box4{
+    background-color: greenyellow;
+    border: solid;
+    border-radius: 15%;
+}
+/* วิธีใช้ cursor style */
+a:hover{
+    cursor: help;
+}

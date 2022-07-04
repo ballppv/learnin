@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-divice-width, initial-scale=1.0">
+    <title>Advance Selector</title>
+    <style>
+        p{
+            background-color: orange;
+        }
+        /* descendant selector */
+        div p{
+            background-color: pink;
+        }
+        /* child selector */
+        div>p{
+            background-color: yellowgreen;
+        }
+        a[target]{
+            background: cyan;
+            color: brown;
+        }
+        a[target='_blank']{
+            background: cadetblue;
+            color: white;
+        }
+        a[target='_blank']:hover{
+            background: black;
+            color: white;
+        }
+        input[type="email"], input[type="text"]{
+            width: 15%;
+            margin: 5px;
+        }
+        input[type="submit"]{
+            background-color: pink;
+            color: brown;
+            border-radius: 15px;
+        }
+        li{
+            padding: 0.25rem;
+            margin: 0.25rem;
+            list-style:none;
+        }
+        li:first-child{
+            background-color: red;
+        }
+        li:last-child{
+            background-color: blueviolet;
+        }
+        /* Pseudo Selector */
+        /* nth-child() คือเราสามารถระบุได้ว่าจะให้แสดง style ที่ตัวไหน ถ้าใส่ตัวเลขจะเป็นระบุตำแหน่งชัดเจน / 
+        ถ้าใส่ n จะระบุว่าทุกๆกี่ตัวใส่ style (กรณีถ้าใส่+ไปด้วย จะเป็นการบอกจุดเริ่มต้นของตัวแรก เช่น 2n+5) */
+        li:nth-child(2n){
+            background-color:pink;
+        }
+        li:nth-child(2n+3){
+            background:cyan;
+        }
+        /* Before&After Pseudo */
+        .is-required::before{
+            content:"*";
+            color:red;
+            padding-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, hic!</p>
+        <ul>
+            <li><p>Item 1</p></li>
+            <li><p>Item 2</p></li>
+            <li><p>Item 3</p></li>
+        </ul>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, minus.</p>
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, repudiandae!</p>
+    <hr>
+    <a href="https://www.youtube.com" target="_blank">Youtube</a>
+    <a href="https://www.google.com" target="_self">Google</a>
+    <a href="https://www.facebook.com">Facebook</a>
+    <hr>
+    <form>
+        <input type="email" placeholder="E-mail">
+        <input type="text" placeholder="Message...">
+        <input type="submit" value="Save">
+    </form>
+    <hr>
+    <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+        <li>Item6</li>
+        <li>Item7</li>
+        <li>Item8</li>
+        <li>Item9</li>
+        <li>Item10</li>
+        <li>Item11</li>
+        <li>Item12</li>
+        <li>Item13</li>
+        <li>Item14</li>
+        <li>Item15</li>
+        <li>Item16</li>
+        <li>Item17</li>
+        <li>Item18</li>
+        <li>Item19</li>
+        <li>Item20</li>
+    </ul>
+    <hr>
+    <label for="" class="is-required">Name</label>
+    <input type="text">
+</body>
+</html>

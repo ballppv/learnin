@@ -1,0 +1,61 @@
+body{
+    background: gray;
+    color: white;
+    text-align: center;
+    padding: 100px;
+}
+h1{
+    display: none;
+}
+
+/* Width of the devices
+320-480px: Mobile Devices
+481-768px: iPad, Tablets
+769-1024px: Laptop
+1025-1200px: Desktop
+1201px+: TV, Widescreen*/
+/* smartphone */
+@media only screen and (max-width: 500px){
+    body{
+        background-color: pink;
+    }
+    #smartphone h1{
+        display: block;
+    }
+}
+/* tablets */
+@media (min-width: 501px) and (max-width: 768px){
+    body{
+        background-color: brown;
+    }
+    #tablets h1{
+        display: block;
+    }
+}
+/* laptop, desktop */
+@media (min-width: 769px) and (max-width: 1200px){
+    body{
+        background-color: rgb(99, 222, 253);
+    }
+    #normal h1{
+        display: block;
+    }
+}
+/* widescreen, TV */
+@media (min-width: 1201px){
+    body{
+        background-color:bisque;
+    }
+    #widescreen h1{
+        display: block;
+    }
+}
+/* landscape */
+@media (max-height: 500px){
+    body{
+        background-color:blueviolet;
+    }
+    #landscape h1{
+        display: block;
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event</title>
+    <link rel="stylesheet" href="styleevent1.css">
+</head>
+<body onload="welcome();">
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, aspernatur.</p>
+    </div>
+    <label for="">Name</label>
+    <input type="text" placeholder="insert your name" onfocus="highlight(this);" onblur="unhighlight(this);">
+    <label for="">Your Tool</label>
+    <select name="" id="menu" onchange="getMenu1();">
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Bootstrap">Bootstrap</option>
+    </select>
+    <p id="display"></p>
+    <a href="" onmouseover="highlight(this);" onmouseout="unhighlight(this);">Menu1</a>
+    <a href="">Menu2</a>
+    <button id="btn">ALERT</button>
+    <script src="event1.js"></script>
+</body>
+</html>

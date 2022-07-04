@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <!-- ลำดับความสำคัญของ style จะเรียงจากล่างขึ้นบน หรืออันล่าสุดสำคัญสุด
+    กรณีถ้าอยากให้อันนั้นสำคัญที่สุดให้ระบุ !important -->
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            height:8000px;
+            width:9000px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        #box1{
+            background-color:pink;
+            position: relative;
+            left: 50px;
+            top: 50px;
+            /* z คือจัดลำดับ layer แนวแกน z */
+            z-index: 2;
+            /* วิธีใส่เงาให้ object (ถ้าต้องการเงาทิศตรงข้ามให้ใส่ x y เป็นค่า ลบ(-))
+            box-shadow: x y blur spread color */
+            box-shadow: 4px 4px 8px 3px rgb(252, 197, 206);
+        }
+        #box2{
+            background-color:beige;
+            position: absolute;
+            top:20px;
+            left: 20px;
+            z-index: 3;
+            box-shadow: -4px -4px 8px 3px rgb(190, 190, 177);
+        }
+        #box3{
+            background-color:peru;
+            position: absolute;
+            right: 50px;
+            z-index: 4;
+            opacity: 0.2;
+        }
+        #box4{
+            background-color:blueviolet;
+            z-index: 5;
+            position:fixed;
+        }
+        #box5{
+            background-color:red;
+            z-index: 6;
+            top: 0;
+            left: 0px;
+            position: sticky;
+            /* opacity คือค่าความทึบ / กำหนดค่าได้ระหว่าง 0-1 */
+            opacity: 0.5;
+        }
+        .container{
+            position:relative;
+            width: 500px;
+            height:200px;
+            background: black;
+            z-index: 1;
+        }
+        #testscroll{
+            position: relative;
+            top: 6500px;
+            background-color: pink;
+            z-index:7;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            border: 3px dotted pink;
+            /* attribute overflow ทำให้ข้อมูลที่เกินออกมาทำงานในรูปแบบต่างๆ */
+        }
+        #testovf{
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <a href="#box4">box4</a>
+    <a href="#box5">box5</a>
+    <a href="#testscroll">test</a>
+    <div id="box1" class="box"></div>
+    <div class="container">
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+    </div>
+    <div id="box4" class="box"></div>
+    <div id="box5" class="box"></div>
+    <div id="testscroll" class="box"></div>
+    <div id="testovf">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores, possimus ad quidem sapiente iusto id assumenda sequi soluta eaque tempore quod labore recusandae ea! Eum nisi quam quisquam iusto incidunt excepturi odit nobis blanditiis cumque aliquid, laudantium dolorum. Soluta quasi vitae praesentium nesciunt impedit facilis quisquam eum excepturi cupiditate!
+    </div>
+</body>
+</html>

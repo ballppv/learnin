@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        /* span/inline จะแสดงผลเท่ากับข้อมูลที่แสดงหรือที่มีอยู่ */
+        /* div/block จะแสดงผลเท่ากับความยาวเต็มบรรทัด */
+        h1{
+            border:2px solid greenyellow
+        }
+        form{
+            border:2px solid pink
+        }
+        input{
+            border:2px solid rgb(88, 194, 236)
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Registration Form</h1>
+    <!-- กรณีมี Server Backend ต้องใส่คำสั่ง action ใน tag form -->
+    <form align="center">
+        <div>
+            <label for="firstname">First Name:</label>
+            <!-- ถ้าใส่ attribute required เอาไว้ใน input tag คือการบังคับว่าต้องใส่ข้อมูลช่องนั้นเท่านั้น -->
+            <!-- สามารถกำหนดจำนวนตัวอักษรในช่องคำตอบได้โดย maxlength="n" -->
+            <input type="text" name="fname" placeholder="insert first name(A-Z only)" required>
+        </div>
+        <div>
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lname" placeholder="insert last name(A-Z only)" required>
+        </div>
+        <div>
+            <label for="lastname">E-Mail:</label>
+            <input type="email" name="email" placeholder="insert e-mail">
+        </div>
+        <div>
+            <label for="lastname">Password:</label>
+            <input type="password" name="password" placeholder="insert password">
+        </div>
+        <div>
+            <label for="">Address:</label>
+            <textarea name="" cols="20" rows="5" placeholder="describe your address"></textarea>
+        </div>
+        <div>
+            <label for="lastname">Age:</label>
+            <!-- value คือ set default ในช่อง input -->
+            <input type="number" name="age" min="0" max="150" value="1">
+        </div>
+        <div>
+            <label for="lastname">Birthday:</label>
+            <input type="date" name="birthday">
+        </div>
+        <div>
+            <label for="lastname">Tel.</label>
+            <input type="tel" name="tel">
+        </div>
+        <div>
+            <label for="lastname">Favorite Color:</label>
+            <input type="color" name="color">
+        </div>
+        <!-- EX. attribute ต่างๆ (เช่น readonly, required) -->
+        <div>
+            <label for="lastname">Range:</label>
+            <input type="range" name="rangenumber" value="1">
+        </div>
+        <div>
+            <label for="lastname">Education:</label>
+            <select name="edu" id="">
+                <!-- ถ้าใส่ attribute selected เอาไว้ใน option จะ set default เป็นอันนั้น -->
+                <option value="---">---</option>
+                <option value="High School Certificate">High School Certificate</option>
+                <option value="Bachelor Degrees">Bachelor Degrees</option>
+                <option value="Master Degrees">Master Degrees</option>
+                <option value="Doctor Degrees">Doctor Degrees</option>
+            </select>
+        </div>
+        <div>
+            <label for="lastname">Gender:</label>
+            <!-- type radio จะทำช่องให้เลือก และจะเลือกได้ช่องเดียวหากอยู่ในกลุ่มเดียวกัน -->
+            <!-- ต้องใส่ attribute name เพื่อระบุให้อยู่ในกลุ่มเดียวกันในตัวเลือก ไม่งั้นจะติ๊กเลือกได้ทั้งหมด -->
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female
+        </div>
+        <div>
+            <label for="lastname">Favorite:</label>
+            <!-- type checkbox จะทำช่องให้ติ้กๆ กี่ช่องก็ได้ -->
+            <input type="checkbox" name="fav">Devolope Website
+            <input type="checkbox" name="fav">Play Games
+            <input type="checkbox" name="fav">Excercise
+            <input type="checkbox" name="fav">ETC
+        </div>
+        <div>
+            <label for="lastname">Attach File</label>
+            <input type="file">
+        </div>
+        <div>
+            <label for="lastname">Website:</label>
+            <input type="url">
+        </div>
+        <div>
+            <!-- ใช้ได้ทั้ง2แบบ input/button -->
+            <input type="submit" value="Submit">
+            <button type="submit">Submit</button>
+            <input type="reset" name="" id="" value="Clear">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class & ID</title>
+    <style>
+        h1{
+            color:red;
+        }
+        /* class ให้ระบุแทนโดยใช้ dot(.) ใน style */
+        .b{
+            color:darkgoldenrod;
+        }
+        /* id ให้ระบุแทนโดยใช้ sharp(#) ใน style */
+        #a{
+            color:pink;
+        }
+        .a{
+            color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!-- Class ใช้ซ้ำกันได้ เนื่องจากอ้างอิงถึงกันเป็นกลุ่ม -->
+    <!-- ID ไม่ควรใช้ซ้ำกัน เนื่องจากการเรียกอ้างอิงข้อมูลใน Backend(CSS/JS) จะทำให้ผิดพลาด -->
+    <h1 class="a" id="a">Bally class a id a</h1>
+    <h1 class="b">Bally class b</h1>
+    <h1 id="b">Bally id b</h1>
+    <h1 id="c">Bally id c</h1>
+    <h1 class="b">Bally class b</h1>
+
+    <div class="b">
+        html css js class b
+    </div>
+    <span class="a">
+        span test class a
+    </span>
+
+    <hr>
+    <a href="HTML.html">Home</a>
+</body>
+</html>

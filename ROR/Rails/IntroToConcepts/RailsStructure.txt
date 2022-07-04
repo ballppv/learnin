@@ -1,0 +1,22 @@
+Structure of a Rails Application
+
+app >>> assets  >>> config
+                >>> images: stores Images, that we use in the layout of our app
+                >>> stylesheets: stores Stylesheets files (CSS File)
+    >>> channels: available works with application cable (Ex. chat application)
+    >>> controllers: stores all controllers, All Controllers that we created will be a subclass of Application Controller
+    >>> helpers: stores helper functions or methods which we're gonna write or use
+    >>> javascript (old version)
+    >>> jobs 
+    >>> mailers
+    >>> models
+    >>> views:  stores layouts and pages (whatever files we created, those will show up to "yield" in application.html.erb)
+                you can set up stylesheets here
+
+
+Rails Naming Conventions
+*Articles Resource
+> Model name: article
+> Article model file name: article.rb
+> Article model class name: Article
+> Table name: articles

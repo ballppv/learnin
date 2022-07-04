@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background:grey;
+    color: white;
+    /* vh = viewport height unit / vw = viewport width unit (เป็นหน่วยที่ต้องระบุเป็น %) */
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 12rem;
+}
+header h1{
+    font-size: 3rem;
+}
+header p{
+    margin: 1rem 0;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    color: rgb(46, 44, 44);
+    padding: 0.75rem 2rem;
+}

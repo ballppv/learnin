@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Basic</title>
+    <!-- นำtag linkจาก google font มาใช้ / หรือจะใช้ @import ในการ embed ก็ได้-->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* Internal Embed */
+        .title{
+            color:blanchedalmond;
+            font-size: 20px;
+        }
+        #title{
+            color:pink;
+            font-size: 28px;
+        }
+        p.title{
+            color:blueviolet
+        }
+        p{
+            font-size: 1rem;
+        }
+        .message{
+            font-size: 2pc;
+            /* กรณีระบุ font-family หลายแบบคือการสำรอง ถ้าบนbrowserไม่รองรับตัวแรกจะวิ่งหาตัวต่อไปเรื่อยๆ */
+            font-family:Courier, monospace;
+        }
+        /* กำหนด style ให้ link */
+        a{
+            text-decoration: none;
+        }
+        a:link{
+            color:pink;
+        }
+        a:visited{
+            color:blueviolet;
+        }
+        a:hover{
+            text-decoration: underline;
+            background-color: rgb(225, 236, 236);
+        }
+        a:active{
+            background-color: goldenrod;
+            color:white;
+        }
+        li{
+            display: inline;
+        }
+        li a{
+            padding-right: 20px;
+        }
+    </style>
+    <!-- External Embed -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<li>
+    <h1>CSS3 Basic</h1>
+    <hr>
+        <!-- วิธีการนำ underline ออกจาก href ให้ใช้ style="text-decoration:none;" -->
+        <button class="button"><a href="https://fonts.google.com/" target="_blank">Font Familiy (Google)</a></button>
+        <br>
+        <button class="button"><a href="https://htmlcolorcodes.com/color-picker/" target="_blank">HTML Color Code</a></button>
+    <hr>
+    <p class="title">LocalB</p>
+    <p style="color:brown">localb</p>
+    <p id="message">TEST ID MESSAGE</p>
+    <hr>
+    <h3>Link to External</h3>
+    <ul>
+        <li><a href="https://www.youtube.com" target="_blank">Youtube</a></li>
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="#">Something</a></li>
+    </ul>
+    <hr>
+
+    <p>DAMN IT</p>
+    <p class="message">DAMN IT</p>
+    <q>ss</q>
+    <div>
+        test1
+        <div>
+            test2
+            <div>
+                test3
+                <div>
+                    test4
+                </div>
+            </div>
+        </div>
+    </div>
+<pre>
+
+
+    test1
+    test2
+    test3
+</pre>
+    <div class="box1">LB</div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+<blockquote>sss</blockquote>
+</body>
+</html>
